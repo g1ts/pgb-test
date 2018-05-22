@@ -94,6 +94,8 @@
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+    <allow-navigation href="http://wikipedia.org/*" />
+    <allow-navigation href="https://wikipedia.org/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
@@ -113,4 +115,5 @@
         <allow-navigation href="http://wikipedia.org/*" />
         <allow-navigation href="https://wikipedia.org/*" />
     </platform>
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
 </widget>
