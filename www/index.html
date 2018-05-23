@@ -8,6 +8,22 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    
+    <style>
+      #gag, #splashscreen {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: #DDD;
+          z-index: 99999;
+      }
+      #splashscreen {
+          z-index: 999999;
+      }
+    </style>
+    
     <title>Hello World</title>
 </head>
 
@@ -17,17 +33,44 @@
             <input type="text" id="input" value="http://cpa.pixliapp.com/">
             <button onclick="go()">go</button>
         </div>
+        <div id='gag'>No network connection</div>
+        <div id='splashscreen'>Loading...</div>
         <iframe id="iframe" src=""></iframe>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
+        var gag = document.getElementById('gag');
+        var splashscreen = document.getElementById('splashscreen');
         function go(){
           var input = document.getElementById('input');
           var iframe = document.getElementById('iframe');
           var url = input.value;
           iframe.src = url;
         }
+        
+        function  isConnected() {
+            var networkState = navigator.connection.type;
+            /*var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';*/
+            return navigator.connection.type != Connection.NONE
+        }
+        
+        document.addEventListener("offline", showGag, false);
+        document.addEventListener("online", hideGag, false);
+        function showGag(){gag.style.display = 'block'}
+        function hideGag(){gag.style.display = 'none'}
+        document.addEventListener("deviceready", function(){
+          splashscreen.style.display = 'none';
+          if(isConnected()) hideGag();
+        },true);
     </script>
 </body>
 </html>
