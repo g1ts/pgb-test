@@ -60,9 +60,16 @@
                 splashscreen.className = ""
             }
             if(isConnected()){
-                gag.className = "hidden"
+                if(gag.className !== "hidden"){
+                    if(frameLoaded){
+                        gag.className = "hidden"
+                    }else{
+                        iframe.src = iframe.src;
+                    }
+                }
             }else{
                 gag.className = ""
+                frameLoaded = false
             }
         }
         document.onload = onStateChanged
