@@ -43,10 +43,10 @@ iframe {
     visibility: hidden;
 }
 #gag {
-    z-index: 99999;
+    z-index: 999999;
 }
 #splashscreen {
-    z-index: 999999;
+    z-index: 99999;
 }
 
 /* Landscape layout (with min-width) */
