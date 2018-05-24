@@ -42,7 +42,6 @@
             states[Connection.CELL_4G]  = 'Cell 4G connection';
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';*/
-            console.log(navigator.connection.type)
             return navigator.connection.type !== Connection.NONE
         }
         
@@ -55,7 +54,6 @@
         },true);
         
         function onStateChanged(){
-            console.log(deviceReady, frameLoaded, isConnected())
             if(deviceReady && frameLoaded){
                 splashscreen.className = "hidden"
             }else{
