@@ -21,12 +21,13 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-        var frameLoaded = false, deviceReady = false;
+        var frameLoaded = false, deviceReady = false, frameReloading = false;
         var gag = document.getElementById('gag');
         var splashscreen = document.getElementById('splashscreen');
         var iframe = document.getElementById('iframe');
         iframe.onload = function() {
             frameLoaded = true
+            frameReloading = false
             onStateChanged()
         }
 
@@ -61,7 +62,7 @@
             }
             if(isConnected()){
                 if(gag.className !== "hidden"){
-                    if(frameLoaded){
+                    if(!frameReloading){
                         gag.className = "hidden"
                     }else{
                         iframe.src = iframe.src;
@@ -69,7 +70,7 @@
                 }
             }else{
                 gag.className = ""
-                frameLoaded = false
+                frameReloading = true
             }
         }
         document.onload = onStateChanged

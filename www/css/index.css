@@ -36,7 +36,7 @@ iframe {
     opacity: 1;
     visibility: visible;
     transition-delay: 0s;
-    transition: opacity 1s, visibility 1s linear 1s;
+    transition: opacity 1s, visibility 0s linear 1s;
 }
 #gag.hidden, #splashscreen.hidden {
     opacity: 0;
