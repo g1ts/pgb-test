@@ -75,6 +75,7 @@
         
         document.addEventListener("offline", onStateChanged, false);
         document.addEventListener("online", onStateChanged, false);
+        window.addEventListener("resize", function(){alert('resize')}, false);
 
         document.addEventListener("deviceready", function(){
           deviceReady = true;
