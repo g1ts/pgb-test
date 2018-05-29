@@ -76,7 +76,7 @@
         
         document.addEventListener("offline", onStateChanged, false);
         document.addEventListener("online", onStateChanged, false);
-        window.addEventListener("resize", function(){alert('resize')}, false);
+        //window.addEventListener("resize", function(){alert('resize')}, false);
         
         var wh = document.getElementById('wh');
         setInterval(function(){wh.innerText = window.innerHeight+' '+Date.now()}, 1000)
