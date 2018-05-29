@@ -8,7 +8,7 @@
       g1ts
     </author>
     <content src="index.html" />
-    <preference name="phonegap-version" value="cli-6.3.0" />
+    <preference name="phonegap-version" value="cli-6.2.0" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="17" />
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.6" />
