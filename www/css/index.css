@@ -49,6 +49,220 @@ iframe {
     z-index: 99999;
 }
 
+
+
+
+
+#splashscreen, #gag {
+    min-height: 100vh;
+    background: #ffffff;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+    background:  -webkit-linear-gradient(121deg, #00c0ff, #11bcf4);
+    background:  -o-linear-gradient(121deg, #00c0ff, #11bcf4);
+    background:  linear-gradient(-31deg, #00c0ff, #11bcf4);;
+}
+.center_abs{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.page_back_circle{
+    width: 21vw;
+    height:21vw;
+    /*padding-top:100%;*/
+    position: fixed;
+}
+.page_back_circle > *{
+    width:100%;
+    height:100%;
+}
+.circle_1{
+    top:15%;
+    left:-9%;
+}
+.circle_2{
+    width:6vw;
+    height:6vw;
+    top:15.3%;
+    left:73.6%;
+}
+.circle_3{
+    width:14.6vw;
+    height:14.6vw;
+    top:29.6%;
+    left:92.6%;
+}
+.circle_4{
+    width:30.5vw;
+    height:30.5vw;
+    left:-18%;
+    top:67.5%;
+}
+
+#circularG{
+    position: relative;
+    width:113px;
+    height:113px;
+    margin: auto;
+}
+
+.circularG{
+    position:absolute;
+    background-color:rgb(255,255,255);
+    width:26px;
+    height:26px;
+    border-radius:17px;
+    -o-border-radius:17px;
+    -ms-border-radius:17px;
+    -webkit-border-radius:17px;
+    -moz-border-radius:17px;
+    animation-name:bounce_circularG;
+    -o-animation-name:bounce_circularG;
+    -ms-animation-name:bounce_circularG;
+    -webkit-animation-name:bounce_circularG;
+    -moz-animation-name:bounce_circularG;
+    animation-duration:0.96s;
+    -o-animation-duration:0.96s;
+    -ms-animation-duration:0.96s;
+    -webkit-animation-duration:0.96s;
+    -moz-animation-duration:0.96s;
+    animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    animation-direction:normal;
+    -o-animation-direction:normal;
+    -ms-animation-direction:normal;
+    -webkit-animation-direction:normal;
+    -moz-animation-direction:normal;
+}
+
+#circularG_1{
+    left:0;
+    top:45px;
+    animation-delay:0.36s;
+    -o-animation-delay:0.36s;
+    -ms-animation-delay:0.36s;
+    -webkit-animation-delay:0.36s;
+    -moz-animation-delay:0.36s;
+}
+
+#circularG_2{
+    left:11px;
+    top:11px;
+    animation-delay:0.48s;
+    -o-animation-delay:0.48s;
+    -ms-animation-delay:0.48s;
+    -webkit-animation-delay:0.48s;
+    -moz-animation-delay:0.48s;
+}
+
+#circularG_3{
+    top:0;
+    left:45px;
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+}
+
+#circularG_4{
+    right:11px;
+    top:11px;
+    animation-delay:0.72s;
+    -o-animation-delay:0.72s;
+    -ms-animation-delay:0.72s;
+    -webkit-animation-delay:0.72s;
+    -moz-animation-delay:0.72s;
+}
+
+#circularG_5{
+    right:0;
+    top:45px;
+    animation-delay:0.84s;
+    -o-animation-delay:0.84s;
+    -ms-animation-delay:0.84s;
+    -webkit-animation-delay:0.84s;
+    -moz-animation-delay:0.84s;
+}
+
+#circularG_6{
+    right:11px;
+    bottom:11px;
+    animation-delay:0.96s;
+    -o-animation-delay:0.96s;
+    -ms-animation-delay:0.96s;
+    -webkit-animation-delay:0.96s;
+    -moz-animation-delay:0.96s;
+}
+
+#circularG_7{
+    left:45px;
+    bottom:0;
+    animation-delay:1.08s;
+    -o-animation-delay:1.08s;
+    -ms-animation-delay:1.08s;
+    -webkit-animation-delay:1.08s;
+    -moz-animation-delay:1.08s;
+}
+
+#circularG_8{
+    left:11px;
+    bottom:11px;
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -ms-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+}
+@keyframes bounce_circularG{
+    0%{
+        -webkit-transform:scale(1);
+                transform:scale(1);
+    }
+
+    100%{
+        -webkit-transform:scale(.3);
+                transform:scale(.3);
+    }
+}
+
+@-webkit-keyframes bounce_circularG{
+    0%{
+        -webkit-transform:scale(1);
+    }
+
+    100%{
+        -webkit-transform:scale(.3);
+    }
+}
+.loading_text {
+    margin-top: 3vw;
+}
+
+.no_internet_img {
+    width: 17.3vw;
+    height: 17.3vw;
+    max-width: 134px;
+    max-height: 134px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+
+
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {

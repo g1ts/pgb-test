@@ -14,9 +14,36 @@
 
 <body>
     <div class="app">
-        <div id='gag' class="hidden">No network connection</div>
-        <div id='splashscreen'>Loading...</div>
-        <iframe id="iframe" src="http://cpa.pixliapp.com/"></iframe>
+        <div id="gag" class="hidden">
+          <div class="center_abs">
+              <img src="./img/internet.svg" class="no_internet_img"/>
+              <img class="loading_text" src="./img/ce.png" alt="НЕТ ИНТЕРНЕТА">
+          </div>
+          <div class="page_back_circle circle_1"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="transparent"></circle></svg></div>
+          <div class="page_back_circle circle_2"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+          <div class="page_back_circle circle_3"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+          <div class="page_back_circle circle_4"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+        </div>
+        <div id="splashscreen">
+          <div class="center_abs">
+              <div id="circularG">
+                  <div id="circularG_1" class="circularG"></div>
+                  <div id="circularG_2" class="circularG"></div>
+                  <div id="circularG_3" class="circularG"></div>
+                  <div id="circularG_4" class="circularG"></div>
+                  <div id="circularG_5" class="circularG"></div>
+                  <div id="circularG_6" class="circularG"></div>
+                  <div id="circularG_7" class="circularG"></div>
+                  <div id="circularG_8" class="circularG"></div>
+              </div>
+              <img class="loading_text" src="./img/loading.png" alt="ИДЕТ ЗАГРУЗКА">
+          </div>
+          <div class="page_back_circle circle_1"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="transparent"></circle></svg></div>
+          <div class="page_back_circle circle_2"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+          <div class="page_back_circle circle_3"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+          <div class="page_back_circle circle_4"><svg><circle cx="50%" cy="50%" r="49%" stroke="#ffffff" stroke-width="1" fill="#04bffc"></circle></svg></div>
+        </div>
+        <iframe id="iframe" src="http://cpa.pixliapp.com/mobile-login.html"></iframe>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
