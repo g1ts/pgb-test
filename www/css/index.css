@@ -12,14 +12,18 @@ body {
 }
 
 /* Portrait layout (default) */
+
+html, body, .app {
+    height: 100%;
+}
+
 .app {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    /*position: absolute;*/
 }
 
 iframe {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     height: 100%;
     padding: 0;
