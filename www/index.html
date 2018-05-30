@@ -14,7 +14,7 @@
 
 <body>
     <div class="app">
-        <div id="wh" style="position: fixed; top: 10px; left: 10px; z-index: 9999999;">0</div>
+        <!-- <div id="wh" style="position: fixed; top: 10px; left: 10px; z-index: 9999999;">0</div> -->
         <div id="gag" class="hidden">
           <div class="center_abs">
               <img src="./img/internet.svg" class="no_internet_img"/>
@@ -78,8 +78,8 @@
         document.addEventListener("online", onStateChanged, false);
         //window.addEventListener("resize", function(){alert('resize')}, false);
         
-        var wh = document.getElementById('wh');
-        setInterval(function(){wh.innerText = window.innerHeight+' '+Date.now()}, 1000)
+        //var wh = document.getElementById('wh');
+        //setInterval(function(){wh.innerText = window.innerHeight+' '+Date.now()}, 1000)
 
         document.addEventListener("deviceready", function(){
           deviceReady = true;
